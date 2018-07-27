@@ -1,0 +1,2 @@
+include "app", "models", "services", "utils"
+rootProject.name = "Exer 5"

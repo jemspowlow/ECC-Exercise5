@@ -1,0 +1,14 @@
+plugins{
+	id "com.github.johnrengelman.shadow"
+}
+dependencies{
+	compile project(':services')
+}
+
+shadowJar{
+
+	manifest {
+		attributes 'Main-Class':'app.App'
+	}
+
+}

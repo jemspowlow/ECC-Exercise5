@@ -1,0 +1,9 @@
+plugins{
+	id "com.github.johnrengelman.shadow"
+}
+dependencies{
+		compile project(':models') 
+		compile project(':utils')
+		compile 'org.apache.commons:commons-text:1.4'
+		
+}

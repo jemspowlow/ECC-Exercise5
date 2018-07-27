@@ -1,0 +1,28 @@
+plugins {
+	id "java"
+	id "com.github.johnrengelman.shadow" version "2.0.4"
+ }
+dependencies {
+		compile project (':app')
+ }
+
+allprojects {
+	apply plugin: "java"
+	apply plugin: "java-library"
+	task hello << { task -> println "I'm $task.project.name"}
+	
+	repositories {
+		mavenCentral()
+ 	}
+}
+jar {
+	manifest {
+		attributes 'Main-Class':'app.App'
+	}
+} 	
+task copyTable(type:Copy){
+	from ("Table.txt")
+	into ("${buildDir}/libs")
+		
+}
+
